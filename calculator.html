@@ -11,81 +11,65 @@
     <input  type="text" readonly id="screen">
     <div class="button">
 
-      <button class="single_button" onclick="currentdisplay=``
+      <button class="single_button color" onclick="currentdisplay=``
       document.querySelector(`#screen`).value = currentdisplay";
       ><h1>C</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `1`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(1)";
       ><h1>1</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `2`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(2)";
       ><h1>2</h1></button>
 
     </div>
     <div class="button">
-      <button class="single_button" onclick="currentdisplay =currentdisplay + `+`
-      document.querySelector(`#screen`).value = currentdisplay";
-      ><h1>+</h1></button>
+      <button class="single_button color" onclick="addValue(`+`)";
+      ><h1>&plus;</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `3`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(3)";
       ><h1>3</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `4`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(4)";
       ><h1>4</h1></button>
 
     </div>
     <div class="button">
-      <button class="single_button" onclick="currentdisplay =currentdisplay + `-`
-      document.querySelector(`#screen`).value = currentdisplay";
-      ><h1>-</h1></button>
+      <button class="single_button color" onclick="addValue(`-`)";
+      ><h1>&minus;</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `5`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(5)";
       ><h1>5</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `6`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(6)";
       ><h1>6</h1></button>
 
     </div>
     <div class="button">
-      <button class="single_button" onclick="currentdisplay =currentdisplay + `*`
-      document.querySelector(`#screen`).value = currentdisplay";
-      ><h1>*</h1></button>
+      <button class="single_button color" onclick="addValue(`×`)";
+      ><h1>&times;</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `7`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(7)";
       ><h1>7</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `8`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(8)";
       ><h1>8</h1></button>
 
     </div>
     <div class="button">
-      <button class="single_button" onclick="currentdisplay =currentdisplay + `/`
-      document.querySelector(`#screen`).value = currentdisplay";
-      ><h1>/</h1></button>
+      <button class="single_button color" onclick="addValue(`÷`)";
+      ><h1>&divide;</h1></button>
 
-      <button class="single_button shift" onclick="finalValue=eval(currentdisplay)
-      document.querySelector(`#screen`).value = finalValue";><h1>=</h1></button>
+      <button class="single_button shift color" onclick="result()"><h1>&equals;</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `9`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(9)";
       ><h1>9</h1></button>
 
     </div>
     <div class="button">
-      <button class="single_button" id="last_row" onclick="currentdisplay =currentdisplay + `0`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button" id="last_row" onclick="addValue(0)";
       ><h1>0</h1></button>
 
-      <button class="single_button shift" onclick="currentdisplay =currentdisplay + `.`
-      document.querySelector(`#screen`).value = currentdisplay";
+      <button class="single_button shift" onclick="addValue(`.`)";
       ><h1>.</h1></button>
 
     </div>
@@ -96,6 +80,26 @@
     let currentdisplay =``;
     document.querySelector(`#screen`).value = currentdisplay;
     let finalValue=``;
+    
+    function addValue(value) {
+      let lastchar=currentdisplay[currentdisplay.length - 1];
+      let symbol = [`+`,`-`,`×`,`÷`,`*`,`/`];
+
+      if (symbol.includes(lastchar) && symbol.includes(value)) {
+        return;
+      } else{
+        currentdisplay += value;
+        document.querySelector(`#screen`).value = currentdisplay;
+      }
+
+    }
+
+    function result() {
+      currentdisplay = currentdisplay.replace(/×/g,`*`);
+      currentdisplay = currentdisplay.replace(/÷/g,`/`);
+      finalValue=eval(currentdisplay)
+      document.querySelector(`#screen`).value = finalValue;
+    }
   </script>
 </body>
 </html>

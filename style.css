@@ -2,12 +2,17 @@
   margin: 0px;
   padding: 0px;
 }
+body{
+  background: rgb(18, 18, 19);
+}
 .calc{
   width: 350px;
   height: 650px;
-  border: 5px groove black;
+  border: .8rem groove black;
   border-radius: 10px;
   margin-left: 500px;
+  box-shadow: 5px 10px 10px rgb(37, 37, 37);
+  background-color: rgb(19, 26, 26);
 }
 #screen{
   width: 300px;
@@ -32,6 +37,10 @@
   background-color: rgba(63, 63, 70, 0.123);
   border: 2px solid;
   border-radius: 10px;
+  background-color: rgb(73, 83, 80);
+}
+.color{
+  background-color: orangered;
 }
 #last_row{
   margin-left: 40px;
