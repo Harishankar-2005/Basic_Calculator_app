@@ -5,10 +5,9 @@ A clean, responsive calculator built with HTML, CSS, and vanilla JavaScript.
 ## Features
 
 - Basic operations: addition, subtraction, multiplication, division
-- Percentage (%) and sign toggle (+/−)
 - Decimal support
-- Keyboard support (`0–9`, `+`, `-`, `*`, `/`, `.`, `Enter`, `Backspace`, `Escape`)
-- Error handling (invalid expressions, division by zero)
+- Keyboard support (`0–9`, `+`, `-`, `*`, `/`, `.`, `Enter`, `Clear`)
+- Error handling (invalid expressions)
 - Responsive design — works on mobile and desktop
 
 ## How to Use
