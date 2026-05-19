@@ -34,7 +34,6 @@ body{
 .single_button{
   width: 70px;
   height: 70px;
-  background-color: rgba(63, 63, 70, 0.123);
   border: 2px solid;
   border-radius: 10px;
   background-color: rgb(73, 83, 80);
@@ -51,29 +50,26 @@ body{
 
 @media (max-width:400px){
 .calc{
-  width: 100vh;
+  width: 100vw;
   margin-left: 0px;
-  height: 1500px;;
+  height: 240vw;
 }
+
 #screen{
-  width: 90vh;
-  margin-left: 5vh;
-  height: 20vh;
+  width: 85vw;
 }
+
 .button{
-  margin-left: 8vh;
-  width: 85vh;
-  height: 200px;
+  margin-left: 8vw;
+  width: 85vw;
+  height: 30vw;
 }
 .single_button{
   width: 150px;
-  height: 150px;
-}
-.shift{
-  margin-left: 20vh;
-}
-#last_row{
-  margin-left: 100px;
+  height: 100px;
 }
 
+#last_row{
+  margin-left: 0px;
+}
 }
