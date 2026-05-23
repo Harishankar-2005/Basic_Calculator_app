@@ -27,3 +27,6 @@ README.md         # This file
 - HTML5
 - CSS3 (CSS Grid, CSS Variables, Google Fonts)
 - Vanilla JavaScript (no libraries)
+
+## Live Demo
+-play now: [https://harishankar-2005.github.io/Basic_Calculator_app/]
